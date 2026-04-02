@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.tnt_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.SAPPHIRE.get());
+                        pOutput.accept(ModItems.HOOKARM.get());
                     })
                     .build());
 
