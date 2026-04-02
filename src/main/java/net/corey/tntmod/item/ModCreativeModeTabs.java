@@ -22,7 +22,9 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.tnt_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.SAPPHIRE.get());
-                        pOutput.accept(ModItems.HOOKARM.get());
+                        pOutput.accept(ModItems.HOOK_SWORD.get());
+                        pOutput.accept(ModItems.SILVERED_SWORD.get());
+                        pOutput.accept(ModItems.WORLD_ESSANCE.get());
                     })
                     .build());
 
