@@ -19,9 +19,10 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.tnt_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.SAPPHIRE.get());
+                        pOutput.accept(ModItems.WORLD_ESSENCE.get());
                         pOutput.accept(ModItems.HOOK_SWORD.get());
                         pOutput.accept(ModItems.SILVERED_SWORD.get());
-                        pOutput.accept(ModItems.WORLD_ESSENCE.get());
+                        pOutput.accept(ModItems.AMETHYST_SWORD.get());
                     })
                     .build());
 

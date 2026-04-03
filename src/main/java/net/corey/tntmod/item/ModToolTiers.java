@@ -13,8 +13,7 @@ import java.util.List;
 
 public class ModToolTiers {
     public static final Tier WORLD_ESSENCE = TierSortingRegistry.registerTier(
-            new ForgeTier(5,3000,10f,17f,20,
+            new ForgeTier(5,3000,4f,17f,20,
                     ModTags.Blocks.NEEDS_WORLD_ESSENCE_TOOL, () -> Ingredient.of(ModItems.WORLD_ESSENCE.get())),
             new ResourceLocation(Tntmod.MODID, "world_essence"), List.of(Tiers.NETHERITE), List.of());
-
 }
