@@ -16,14 +16,14 @@ public class ModItems {
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> WORLD_ESSANCE = ITEMS.register("wolrd_essance",
+    public static final RegistryObject<Item> WORLD_ESSENCE = ITEMS.register("world_essence",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> HOOK_SWORD = ITEMS.register("hook_sword",
-            () -> new SwordItem(Tiers.DIAMOND, 0,0, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties()));
 
     public static final RegistryObject<Item> SILVERED_SWORD = ITEMS.register("silvered_sword",
-            () -> new SwordItem(Tiers.DIAMOND, 0,0, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties()));
 
     public static void  register(IEventBus eventBus) {
         ITEMS.register(eventBus);
