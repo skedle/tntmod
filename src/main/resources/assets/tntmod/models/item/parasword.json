@@ -1,0 +1,18 @@
+{
+	"parent": "minecraft:item/handheld",
+	"loader": "forge:separate_transforms",
+	"base": {
+		"parent": "tntmod:item/parasword_3d"
+	},
+	"perspectives": {
+		"gui": {
+			"parent": "tntmod:item/parasword_2d"
+		},
+		"ground": {
+			"parent": "tntmod:item/parasword_2d"
+		},
+		"fixed": {
+			"parent": "tntmod:item/parasword_2d"
+		}
+	}
+}

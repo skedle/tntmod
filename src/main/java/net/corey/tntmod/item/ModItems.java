@@ -18,6 +18,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> WORLD_ESSENCE = ITEMS.register("world_essence",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> PARASITE = ITEMS.register("parasite",
+            () -> new Item(new Item.Properties().food(ModFoods.PARASITE)));
+
     // --------------------------------------------------------------------------------------------------------------------------------
     // Tools 'n' Weapons
     public static final RegistryObject<Item> HOOK_SWORD = ITEMS.register("hook_sword",
@@ -27,6 +31,9 @@ public class ModItems {
             () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties()));
 
     public static final RegistryObject<Item> AMETHYST_SWORD = ITEMS.register("amethyst_sword",
+            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties()));
+
+    public static final RegistryObject<Item> PARASWORD = ITEMS.register("parasword",
             () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties()));
 
     public static void  register(IEventBus eventBus) {
