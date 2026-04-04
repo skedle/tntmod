@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.PARASITE.get());
                         pOutput.accept(ModItems.TALLOW.get());
                         pOutput.accept(ModItems.EMPTY_BOTTLE.get());
+                        pOutput.accept(ModItems.LEDGBAR.get());
 
                         pOutput.accept(ModItems.HOOK_SWORD.get());
                         pOutput.accept(ModItems.SILVERED_SWORD.get());

@@ -2,6 +2,7 @@ package net.corey.tntmod.item;
 
 import net.corey.tntmod.Tntmod;
 import net.corey.tntmod.item.custom.FuelItem;
+import net.corey.tntmod.item.custom.LedgBarItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,6 +23,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> PARASITE = ITEMS.register("parasite",
             () -> new Item(new Item.Properties().stacksTo(1).food(ModFoods.PARASITE)));
+
+    public static final RegistryObject<Item> LEDGBAR = ITEMS.register("ledgbar",
+            () -> new LedgBarItem(new Item.Properties().food(ModFoods.LEDGBAR)));
 
     public static final RegistryObject<Item> TALLOW = ITEMS.register("tallow",
             () -> new FuelItem(new Item.Properties(), 12800));

@@ -1,12 +1,19 @@
 {
   "item.tntmod.sapphire": "Sapphire",
+  "item.tntmod.world_essence": "World Essence",
+  "item.tntmod.empty_bottle": "Empty Bottle",
+
+  "item.tntmod.tallow": "Kuraokami Tallow",
+
+  "item.tntmod.parasite": "Parasite",
+  "item.tntmod.ledgbar": "Ledg Bar",
+
   "item.tntmod.hook_sword": "Ghoulish Hook",
   "item.tntmod.silvered_sword": "Silvered Sword",
-  "item.tntmod.world_essence": "World Essence",
   "item.tntmod.amethyst_sword": "Amethyst Sword",
   "item.tntmod.parasite_sword": "Parasword",
-  "item.tntmod.parasite": "Parasite",
-  "item.tntmod.tallow": "Kuraokami Tallow",
-  "item.tntmod.empty_bottle": "Empty Bottle",
+
+  "tooltip.tntmod.ledg_bar.tooltip": "Makes you feel Invincible!",
+
   "creativetab.tnt_tab": "TNTMod"
 }
