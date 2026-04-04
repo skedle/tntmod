@@ -4,7 +4,9 @@
   "item.tntmod.silvered_sword": "Silvered Sword",
   "item.tntmod.world_essence": "World Essence",
   "item.tntmod.amethyst_sword": "Amethyst Sword",
-  "item.tntmod.parasword": "Parasword",
+  "item.tntmod.parasite_sword": "Parasword",
   "item.tntmod.parasite": "Parasite",
+  "item.tntmod.tallow": "Kuraokami Tallow",
+  "item.tntmod.empty_bottle": "Empty Bottle",
   "creativetab.tnt_tab": "TNTMod"
 }
