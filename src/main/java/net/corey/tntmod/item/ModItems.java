@@ -12,6 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
     // Items
+
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Tntmod.MODID);
 
@@ -21,20 +22,29 @@ public class ModItems {
     public static final RegistryObject<Item> WORLD_ESSENCE = ITEMS.register("world_essence",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> EMPTY_BOTTLE = ITEMS.register("empty_bottle",
+            () -> new Item(new Item.Properties()));
+
+
+    // --------------------------------------------------------------------------------------------------------------------------------
+    // Food
+
     public static final RegistryObject<Item> PARASITE = ITEMS.register("parasite",
             () -> new Item(new Item.Properties().stacksTo(1).food(ModFoods.PARASITE)));
 
     public static final RegistryObject<Item> LEDGBAR = ITEMS.register("ledgbar",
             () -> new LedgBarItem(new Item.Properties().food(ModFoods.LEDGBAR)));
 
+    // --------------------------------------------------------------------------------------------------------------------------------
+    // Fuel
+
     public static final RegistryObject<Item> TALLOW = ITEMS.register("tallow",
             () -> new FuelItem(new Item.Properties(), 12800));
 
-    public static final RegistryObject<Item> EMPTY_BOTTLE = ITEMS.register("empty_bottle",
-            () -> new Item(new Item.Properties()));
 
     // --------------------------------------------------------------------------------------------------------------------------------
     // Tools 'n' Weapons
+
     public static final RegistryObject<Item> HOOK_SWORD = ITEMS.register("hook_sword",
             () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties()));
 
@@ -45,6 +55,9 @@ public class ModItems {
             () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties()));
 
     public static final RegistryObject<Item> PARASITE_SWORD = ITEMS.register("parasite_sword",
+            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties()));
+
+    public static final RegistryObject<Item> CLAW_SCYTHE = ITEMS.register("claw_scythe",
             () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties()));
 
     public static void  register(IEventBus eventBus) {

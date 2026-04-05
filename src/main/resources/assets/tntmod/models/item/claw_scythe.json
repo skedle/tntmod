@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "tntmod:item/claw_scythe_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "tntmod:item/claw_scythe_2d"
+    },
+    "ground": {
+      "parent": "tntmod:item/claw_scythe_2d"
+    },
+    "fixed": {
+      "parent": "tntmod:item/claw_scythe_2d"
+    }
+  }
+}

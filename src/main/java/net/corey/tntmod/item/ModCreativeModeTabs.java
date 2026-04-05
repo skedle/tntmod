@@ -20,15 +20,18 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.SAPPHIRE.get());
                         pOutput.accept(ModItems.WORLD_ESSENCE.get());
-                        pOutput.accept(ModItems.PARASITE.get());
-                        pOutput.accept(ModItems.TALLOW.get());
                         pOutput.accept(ModItems.EMPTY_BOTTLE.get());
+
+                        pOutput.accept(ModItems.PARASITE.get());
                         pOutput.accept(ModItems.LEDGBAR.get());
+
+                        pOutput.accept(ModItems.TALLOW.get());
 
                         pOutput.accept(ModItems.HOOK_SWORD.get());
                         pOutput.accept(ModItems.SILVERED_SWORD.get());
                         pOutput.accept(ModItems.AMETHYST_SWORD.get());
                         pOutput.accept(ModItems.PARASITE_SWORD.get());
+                        pOutput.accept(ModItems.CLAW_SCYTHE.get());
                     })
                     .build());
 
