@@ -32,6 +32,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.AMETHYST_SWORD.get());
                         pOutput.accept(ModItems.PARASITE_SWORD.get());
                         pOutput.accept(ModItems.CLAW_SCYTHE.get());
+
+                        pOutput.accept(ModItems.TEST_MASK.get());
                     })
                     .build());
 

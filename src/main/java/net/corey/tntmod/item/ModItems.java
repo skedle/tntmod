@@ -3,6 +3,8 @@ package net.corey.tntmod.item;
 import net.corey.tntmod.Tntmod;
 import net.corey.tntmod.item.custom.FuelItem;
 import net.corey.tntmod.item.custom.LedgBarItem;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.Equipable;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,7 +27,6 @@ public class ModItems {
     public static final RegistryObject<Item> EMPTY_BOTTLE = ITEMS.register("empty_bottle",
             () -> new Item(new Item.Properties()));
 
-
     // --------------------------------------------------------------------------------------------------------------------------------
     // Food
 
@@ -40,7 +41,6 @@ public class ModItems {
 
     public static final RegistryObject<Item> TALLOW = ITEMS.register("tallow",
             () -> new FuelItem(new Item.Properties(), 12800));
-
 
     // --------------------------------------------------------------------------------------------------------------------------------
     // Tools 'n' Weapons
@@ -59,6 +59,14 @@ public class ModItems {
 
     public static final RegistryObject<Item> CLAW_SCYTHE = ITEMS.register("claw_scythe",
             () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties()));
+
+    // --------------------------------------------------------------------------------------------------------------------------------
+    // Armor
+
+    public static final RegistryObject<Item> TEST_MASK = ITEMS.register("test_mask",
+            () -> new ArmorItem(ModArmorMaterials.TEST_MASK, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    // --------------------------------------------------------------------------------------------------------------------------------
 
     public static void  register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " B ",
+    "G G",
+    " G "
+  ],
+  "key": {
+    "B": {
+      "tag": "minecraft:buttons"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "tntmod:empty_bottle"
+  }
+}
