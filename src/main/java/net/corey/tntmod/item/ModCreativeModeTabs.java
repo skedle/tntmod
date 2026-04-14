@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.WORLD_ESSENCE.get());
                         pOutput.accept(ModItems.EMPTY_BOTTLE.get());
                         pOutput.accept(ModItems.AMBER.get());
+                        pOutput.accept(ModItems.TOADSTONE.get());
 
                         pOutput.accept(ModItems.PARASITE.get());
                         pOutput.accept(ModItems.LEDGBAR.get());
