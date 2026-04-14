@@ -31,7 +31,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.GLASS), has(Items.GLASS))
                 .save(pWriter);
 
-
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModItems.CUT_SAPPHIRE.get(), ModItems.ROUGH_SAPPHIRE.get());
 
     }
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {

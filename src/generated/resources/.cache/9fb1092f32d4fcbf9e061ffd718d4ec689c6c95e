@@ -1,3 +1,5 @@
-// 1.20.1	2026-04-14T15:56:06.497666807	Recipes
+// 1.20.1	2026-04-14T16:34:17.079818334	Recipes
+59580f5a7eae80c7297238c78718e10724141fae data/minecraft/advancements/recipes/misc/cut_sapphire_from_rough_sapphire_stonecutting.json
+983502654cf71715a7a6381bd2abe738b1af4443 data/minecraft/recipes/cut_sapphire_from_rough_sapphire_stonecutting.json
 3cea9ba3df15b4695e92f4f3e79ac447ace001bb data/tntmod/advancements/recipes/misc/empty_bottle.json
 e08a928f2d22bf606821c41a1ed9154cd766fb8d data/tntmod/recipes/empty_bottle.json
