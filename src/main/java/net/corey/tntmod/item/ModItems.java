@@ -18,7 +18,10 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Tntmod.MODID);
 
-    public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire",
+    public static final RegistryObject<Item> ROUGH_SAPPHIRE = ITEMS.register("rough_sapphire",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> CUT_SAPPHIRE = ITEMS.register("cut_sapphire",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> WORLD_ESSENCE = ITEMS.register("world_essence",

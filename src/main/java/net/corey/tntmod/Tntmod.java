@@ -1,6 +1,7 @@
 package net.corey.tntmod;
 
 import com.mojang.logging.LogUtils;
+import net.corey.tntmod.block.ModBlocks;
 import net.corey.tntmod.item.ModCreativeModeTabs;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -69,6 +70,7 @@ public class Tntmod
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

@@ -1,10 +1,13 @@
 {
-  "item.tntmod.sapphire": "Sapphire",
+  "item.tntmod.rough_sapphire": "Rough Sapphire",
+  "item.tntmod.cut_sapphire": "Cut Sapphire",
   "item.tntmod.world_essence": "World Essence",
   "item.tntmod.empty_bottle": "Empty Bottle",
   "item.tntmod.amber": "Amber",
   "item.tntmod.toadstone": "Toadstone",
   "item.tntmod.camellia": "Camellia",
+
+  "block.tntmod.sapphire_block": "Sapphire Block",
 
   "item.tntmod.tallow": "Kuraokami Tallow",
 

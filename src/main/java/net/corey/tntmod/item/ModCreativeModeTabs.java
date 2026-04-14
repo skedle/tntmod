@@ -1,5 +1,6 @@
 package net.corey.tntmod.item;
 
+import net.corey.tntmod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -18,12 +19,15 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(Items.TNT))
                     .title(Component.translatable("creativetab.tnt_tab"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(ModItems.SAPPHIRE.get());
+                        pOutput.accept(ModItems.ROUGH_SAPPHIRE.get());
+                        pOutput.accept(ModItems.CUT_SAPPHIRE.get());
                         pOutput.accept(ModItems.WORLD_ESSENCE.get());
                         pOutput.accept(ModItems.EMPTY_BOTTLE.get());
                         pOutput.accept(ModItems.AMBER.get());
                         pOutput.accept(ModItems.TOADSTONE.get());
                         pOutput.accept(ModItems.CAMELLIA.get());
+
+                        pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
 
                         pOutput.accept(ModItems.PARASITE.get());
                         pOutput.accept(ModItems.LEDGBAR.get());
