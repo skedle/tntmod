@@ -27,6 +27,9 @@ public class ModItems {
     public static final RegistryObject<Item> EMPTY_BOTTLE = ITEMS.register("empty_bottle",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> AMBER = ITEMS.register("amber",
+            () -> new Item(new Item.Properties()));
+
     // --------------------------------------------------------------------------------------------------------------------------------
     // Food
 
