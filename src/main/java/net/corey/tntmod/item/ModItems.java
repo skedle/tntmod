@@ -39,6 +39,9 @@ public class ModItems {
     public static final RegistryObject<Item> CAMELLIA = ITEMS.register("camellia",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> RUNE1 = ITEMS.register("rune1",
+            () -> new Item(new Item.Properties()));
+
     // --------------------------------------------------------------------------------------------------------------------------------
     // Food
 

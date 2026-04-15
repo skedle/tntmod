@@ -26,6 +26,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.AMBER.get());
                         pOutput.accept(ModItems.TOADSTONE.get());
                         pOutput.accept(ModItems.CAMELLIA.get());
+                        pOutput.accept(ModItems.RUNE1.get());
 
                         pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
 
