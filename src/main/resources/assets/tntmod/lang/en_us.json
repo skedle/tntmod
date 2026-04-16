@@ -7,6 +7,7 @@
   "item.tntmod.toadstone": "Toadstone",
   "item.tntmod.camellia": "Camellia",
   "item.tntmod.rune1": "Rune",
+  "item.tntmod.ticket": "Carnival Ticket",
 
   "block.tntmod.sapphire_block": "Sapphire Block",
 
@@ -25,5 +26,5 @@
 
   "tooltip.tntmod.ledg_bar.tooltip": "Makes you feel Invincible!",
 
-  "creativetab.tnt_tab": "TNTMod"
+  "creativetab.tnt_tab": "TNT Mod"
 }

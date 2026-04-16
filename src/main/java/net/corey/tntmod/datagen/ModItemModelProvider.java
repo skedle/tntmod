@@ -25,6 +25,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.TOADSTONE);
         simpleItem(ModItems.CAMELLIA);
         simpleItem(ModItems.RUNE1);
+        simpleItem(ModItems.TICKET);
 
         simpleItem(ModItems.PARASITE);
         simpleItem(ModItems.LEDGBAR);

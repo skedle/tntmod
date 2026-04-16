@@ -3,10 +3,7 @@ package net.corey.tntmod.item;
 import net.corey.tntmod.Tntmod;
 import net.corey.tntmod.item.custom.FuelItem;
 import net.corey.tntmod.item.custom.LedgBarItem;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.Equipable;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -25,7 +22,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> WORLD_ESSENCE = ITEMS.register("world_essence",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> EMPTY_BOTTLE = ITEMS.register("empty_bottle",
             () -> new Item(new Item.Properties()));
@@ -42,6 +39,9 @@ public class ModItems {
     public static final RegistryObject<Item> RUNE1 = ITEMS.register("rune1",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> TICKET = ITEMS.register("ticket",
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
+
     // --------------------------------------------------------------------------------------------------------------------------------
     // Food
 
@@ -49,31 +49,31 @@ public class ModItems {
             () -> new Item(new Item.Properties().stacksTo(1).food(ModFoods.PARASITE)));
 
     public static final RegistryObject<Item> LEDGBAR = ITEMS.register("ledgbar",
-            () -> new LedgBarItem(new Item.Properties().food(ModFoods.LEDGBAR)));
+            () -> new LedgBarItem(new Item.Properties().rarity(Rarity.RARE).food(ModFoods.LEDGBAR)));
 
     // --------------------------------------------------------------------------------------------------------------------------------
     // Fuel
 
     public static final RegistryObject<Item> TALLOW = ITEMS.register("tallow",
-            () -> new FuelItem(new Item.Properties(), 12800));
+            () -> new FuelItem(new Item.Properties().rarity(Rarity.RARE), 12800));
 
     // --------------------------------------------------------------------------------------------------------------------------------
     // Tools 'n' Weapons
 
     public static final RegistryObject<Item> HOOK_SWORD = ITEMS.register("hook_sword",
-            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties().rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> SILVERED_SWORD = ITEMS.register("silvered_sword",
-            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties().rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> AMETHYST_SWORD = ITEMS.register("amethyst_sword",
-            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties().rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> PARASITE_SWORD = ITEMS.register("parasite_sword",
-            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties().rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> CLAW_SCYTHE = ITEMS.register("claw_scythe",
-            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties().rarity(Rarity.EPIC)));
 
     // --------------------------------------------------------------------------------------------------------------------------------
     // Armor
