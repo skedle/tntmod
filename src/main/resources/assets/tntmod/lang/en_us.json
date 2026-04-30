@@ -1,13 +1,19 @@
 {
   "item.tntmod.rough_sapphire": "Rough Sapphire",
   "item.tntmod.cut_sapphire": "Cut Sapphire",
+  "item.tntmod.sapphire_lens": "Sapphire_Lens",
   "item.tntmod.world_essence": "World Essence",
+  "item.tntmod.bomb_core": "Bomb Core",
+  "item.tntmod.moon_essence": "Moon Essence",
   "item.tntmod.empty_bottle": "Empty Bottle",
   "item.tntmod.amber": "Amber",
   "item.tntmod.toadstone": "Toadstone",
   "item.tntmod.camellia": "Camellia",
   "item.tntmod.rune1": "Rune",
+  "item.tntmod.thunder_stone": "Thunder Stone",
   "item.tntmod.ticket": "Carnival Ticket",
+  "item.tntmod.spirit_seeds": "Spirit Seeds",
+
 
   "block.tntmod.sapphire_block": "Sapphire Block",
 
@@ -22,7 +28,8 @@
   "item.tntmod.parasite_sword": "Parasword",
   "item.tntmod.claw_scythe": "Claw of Lolth",
 
-  "item.tntmod.test_mask": "Test Mask",
+  "item.tntmod.ogre_mask": "Ogre Mask",
+  "item.tntmod.owl_mask": "Owl Mask",
 
   "tooltip.tntmod.ledg_bar.tooltip": "Makes you feel Invincible!",
 
