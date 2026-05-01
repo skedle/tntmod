@@ -14,10 +14,10 @@ public enum ModArmorMaterials implements ArmorMaterial {
             SoundEvents.ARMOR_EQUIP_DIAMOND, 1f, 0f, () -> Ingredient.of(ModItems.WORLD_ESSENCE.get())),
 
     OGRE_MASK("ogre_mask", -1, new int[]{0, 0, 0, 0}, 0,
-            SoundEvents.PIG_AMBIENT, 0f, 0f, () -> Ingredient.of(ModItems.WORLD_ESSENCE.get())),
+            SoundEvents.ARMOR_EQUIP_LEATHER, 0f, 0f, () -> Ingredient.of(ModItems.WORLD_ESSENCE.get())),
 
     OWL_MASK("owl_mask", -1, new int[]{0, 0, 0, 0}, 0,
-            SoundEvents.PIG_AMBIENT, 0f, 0f, () -> Ingredient.of(ModItems.WORLD_ESSENCE.get()));
+            SoundEvents.ARMOR_EQUIP_LEATHER, 0f, 0f, () -> Ingredient.of(ModItems.WORLD_ESSENCE.get()));
 
     private final String name;
     private final int durabilityMultiplier;

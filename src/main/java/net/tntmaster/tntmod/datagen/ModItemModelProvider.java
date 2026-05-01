@@ -37,6 +37,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.TALLOW);
 
+        simpleItem(ModItems.OWL_MASK);
+        simpleItem(ModItems.OGRE_MASK);
+
 
 
 

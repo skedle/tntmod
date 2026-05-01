@@ -25,13 +25,13 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> WORLD_ESSENCE = ITEMS.register("world_essence",
-            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
+            () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
 
     public static final RegistryObject<Item> BOMB_CORE = ITEMS.register("bomb_core",
             () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> MOON_ESSENCE = ITEMS.register("moon_essence",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
 
     public static final RegistryObject<Item> EMPTY_BOTTLE = ITEMS.register("empty_bottle",
             () -> new Item(new Item.Properties()));
@@ -49,7 +49,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> THUNDER_STONE = ITEMS.register("thunder_stone",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
 
     public static final RegistryObject<Item> TICKET = ITEMS.register("ticket",
             () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
@@ -61,7 +61,7 @@ public class ModItems {
     // Food
 
     public static final RegistryObject<Item> PARASITE = ITEMS.register("parasite",
-            () -> new Item(new Item.Properties().stacksTo(1).food(ModFoods.PARASITE)));
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON).food(ModFoods.PARASITE)));
 
     public static final RegistryObject<Item> LEDGBAR = ITEMS.register("ledgbar",
             () -> new LedgBarItem(new Item.Properties().rarity(Rarity.RARE).food(ModFoods.LEDGBAR)));
@@ -94,10 +94,10 @@ public class ModItems {
     // Armor
 
     public static final RegistryObject<Item> OGRE_MASK = ITEMS.register("ogre_mask",
-            () -> new ArmorItem(ModArmorMaterials.OGRE_MASK, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.OGRE_MASK, ArmorItem.Type.HELMET, new Item.Properties().rarity(Rarity.RARE)));
 
     public static final RegistryObject<Item> OWL_MASK = ITEMS.register("owl_mask",
-            () -> new ArmorItem(ModArmorMaterials.OWL_MASK, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.OWL_MASK, ArmorItem.Type.HELMET, new Item.Properties().rarity(Rarity.RARE)));
 
     // --------------------------------------------------------------------------------------------------------------------------------
 

@@ -1,4 +1,4 @@
-// 1.20.1	2026-04-30T19:16:35.734165255	Item Models: tntmod
+// 1.20.1	2026-04-30T21:56:51.935837426	Item Models: tntmod
 4e749630d468a7d07addf1639f536a4567c83763 assets/tntmod/models/item/amber.json
 1f1ec68e54312d6a91ad53cfe27ff834b8e1f8e3 assets/tntmod/models/item/bomb_core.json
 faa32a58b2aff8ff149da2ca8278dc6dec0e2cf8 assets/tntmod/models/item/camellia.json
@@ -6,6 +6,8 @@ faa32a58b2aff8ff149da2ca8278dc6dec0e2cf8 assets/tntmod/models/item/camellia.json
 aa0cc20c2fc8ff4de07c14f736243acc5205163a assets/tntmod/models/item/empty_bottle.json
 6361b56212e5ad94dc788e28ba185ebf1c014010 assets/tntmod/models/item/ledgbar.json
 d341b2500f89f486b21a6db5eb6c19c24fa1bd87 assets/tntmod/models/item/moon_essence.json
+579f882b772d92ac9b53b87bfe345301861befc9 assets/tntmod/models/item/ogre_mask.json
+45795d766f44911f6acbd0404ac88d15d5747223 assets/tntmod/models/item/owl_mask.json
 aad991ec0bc4ce64a86b5752b88cb21153db0449 assets/tntmod/models/item/parasite.json
 c5973d7afb1b8cfc8ec69fcb447ea26f84a9444c assets/tntmod/models/item/rough_sapphire.json
 e880dc76609f4ba5237aab85e74de0284cf0943b assets/tntmod/models/item/rune1.json
