@@ -1,0 +1,10 @@
+{
+  "disco_girl":{
+    "sounds": [
+      {
+        "name": "tntmod:disco_girl",
+        "stream": true
+      }
+    ]
+  }
+}

@@ -8,6 +8,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.tntmaster.tntmod.sound.ModSounds;
 
 public class ModItems {
     // Items
@@ -100,6 +101,11 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.OWL_MASK, ArmorItem.Type.HELMET, new Item.Properties().rarity(Rarity.RARE)));
 
     // --------------------------------------------------------------------------------------------------------------------------------
+    // Easter Eggs
+
+    public static final RegistryObject<Item> DISCO_GIRL_DISC = ITEMS.register("disco_girl_disc",
+            () -> new RecordItem(6, ModSounds.DISCO_GIRL, new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 2900));
+
 
     public static void  register(IEventBus eventBus) {
         ITEMS.register(eventBus);

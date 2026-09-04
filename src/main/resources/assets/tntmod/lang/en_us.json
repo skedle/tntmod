@@ -31,6 +31,9 @@
   "item.tntmod.ogre_mask": "Ogre Mask",
   "item.tntmod.owl_mask": "Owl Mask",
 
+  "item.tntmod.disco_girl_disc": "Disco Girl",
+  "item.tntmod.disco_girl_disc.desc": "Gravity Falls - Disco Girl",
+
   "tooltip.tntmod.ledg_bar.tooltip": "Makes you feel Invincible!",
 
   "creativetab.tnt_tab": "TNT Mod"

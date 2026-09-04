@@ -40,6 +40,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.OWL_MASK);
         simpleItem(ModItems.OGRE_MASK);
 
+        simpleItem(ModItems.DISCO_GIRL_DISC);
+
 
 
 
