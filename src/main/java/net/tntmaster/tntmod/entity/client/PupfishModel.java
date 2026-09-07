@@ -2,17 +2,12 @@ package net.tntmaster.tntmod.entity.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
-import net.tntmaster.tntmod.entity.animations.ModAnimationDefinitions;
-import net.tntmaster.tntmod.entity.custom.PupfishEntity;
-
-import static net.minecraftforge.client.model.lighting.ForgeModelBlockRenderer.render;
 
 public class PupfishModel<T extends Entity> extends HierarchicalModel<T> {
 	private final ModelPart fish;

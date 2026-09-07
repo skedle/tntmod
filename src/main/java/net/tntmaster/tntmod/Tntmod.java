@@ -6,6 +6,7 @@ import net.tntmaster.tntmod.block.ModBlocks;
 import net.tntmaster.tntmod.block.entity.ModBlockEntities;
 import net.tntmaster.tntmod.entity.ModEntities;
 import net.tntmaster.tntmod.entity.client.PupfIshRenderer;
+import net.tntmaster.tntmod.entity.client.ShelbFishRenderer;
 import net.tntmaster.tntmod.item.ModCreativeModeTabs;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -133,6 +134,7 @@ public class Tntmod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             EntityRenderers.register(ModEntities.PUPFISH.get(), PupfIshRenderer::new);
+            EntityRenderers.register(ModEntities.SHELBFISH.get(), ShelbFishRenderer::new);
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());

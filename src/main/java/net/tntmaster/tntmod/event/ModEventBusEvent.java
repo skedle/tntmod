@@ -14,6 +14,7 @@ public class ModEventBusEvent {
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntities.PUPFISH.get(), PupfishEntity.createAttributes().build());
+        event.put(ModEntities.SHELBFISH.get(), PupfishEntity.createAttributes().build());
     }
 }
 

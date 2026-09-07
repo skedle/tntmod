@@ -17,6 +17,10 @@ public class ModEntities {
             ENTITY_TYPES.register("pupfish", () -> EntityType.Builder.of(PupfishEntity::new, MobCategory.WATER_AMBIENT)
                     .sized(.3f, .6f).build("pupfish"));
 
+    public static final RegistryObject<EntityType<PupfishEntity>> SHELBFISH =
+            ENTITY_TYPES.register("shelbfish", () -> EntityType.Builder.of(PupfishEntity::new, MobCategory.WATER_AMBIENT)
+                    .sized(.3f, .6f).build("shelbfish"));
+
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

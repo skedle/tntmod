@@ -108,6 +108,9 @@ public class ModItems {
     public static final RegistryObject<Item> PUPFISH_SPAWN_EGG = ITEMS.register("pupfish_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.PUPFISH, 0x7e9690, 0xc5d1c5, new Item.Properties()));
 
+    public static final RegistryObject<Item> SHELBFISH_SPAWN_EGG = ITEMS.register("shelbfish_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.SHELBFISH, 0x7e9690, 0xc5d1c5, new Item.Properties()));
+
     // --------------------------------------------------------------------------------------------------------------------------------
     // Easter Eggs
 

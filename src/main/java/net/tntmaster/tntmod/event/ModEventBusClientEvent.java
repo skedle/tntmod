@@ -14,5 +14,6 @@ public class ModEventBusClientEvent {
     @SubscribeEvent
     public static void  registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModModelLayers.PUPFISH_LAYER, PupfishModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.SHELB_FISH_LAYER, PupfishModel::createBodyLayer);
     }
 }

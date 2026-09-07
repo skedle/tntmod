@@ -36,7 +36,10 @@
   "item.tntmod.disco_girl_disc.desc": "Gravity Falls - Disco Girl",
 
   "item.tntmod.pupfish_spawn_egg": "Pupfish Spawn Egg",
-  "entity.tntmod.pupfish":"Pupfish",
+  "item.tntmod.shelbfish_spawn_egg": "Shelbfish Spawn Egg",
+
+  "entity.tntmod.pupfish": "Pupfish",
+  "entity.tntmod.shelbfish": "Shelbfish",
 
   "tooltip.tntmod.ledg_bar.tooltip": "Makes you feel Invincible!",
 
