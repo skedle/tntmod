@@ -16,6 +16,7 @@
 
 
   "block.tntmod.sapphire_block": "Sapphire Block",
+  "block.tntmod.tape_player": "Tape Player",
 
   "item.tntmod.tallow": "Kuraokami Tallow",
 
@@ -33,6 +34,9 @@
 
   "item.tntmod.disco_girl_disc": "Disco Girl",
   "item.tntmod.disco_girl_disc.desc": "Gravity Falls - Disco Girl",
+
+  "item.tntmod.pupfish_spawn_egg": "Pupfish Spawn Egg",
+  "entity.tntmod.pupfish":"Pupfish",
 
   "tooltip.tntmod.ledg_bar.tooltip": "Makes you feel Invincible!",
 

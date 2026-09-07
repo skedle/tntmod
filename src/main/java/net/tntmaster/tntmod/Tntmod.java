@@ -1,7 +1,11 @@
 package net.tntmaster.tntmod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.tntmaster.tntmod.block.ModBlocks;
+import net.tntmaster.tntmod.block.entity.ModBlockEntities;
+import net.tntmaster.tntmod.entity.ModEntities;
+import net.tntmaster.tntmod.entity.client.PupfIshRenderer;
 import net.tntmaster.tntmod.item.ModCreativeModeTabs;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -72,6 +76,8 @@ public class Tntmod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -126,6 +132,7 @@ public class Tntmod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            EntityRenderers.register(ModEntities.PUPFISH.get(), PupfIshRenderer::new);
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());

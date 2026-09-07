@@ -1,6 +1,8 @@
 package net.tntmaster.tntmod.item;
 
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.tntmaster.tntmod.Tntmod;
+import net.tntmaster.tntmod.entity.ModEntities;
 import net.tntmaster.tntmod.item.custom.FuelItem;
 import net.tntmaster.tntmod.item.custom.LedgBarItem;
 import net.minecraft.world.item.*;
@@ -99,6 +101,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> OWL_MASK = ITEMS.register("owl_mask",
             () -> new ArmorItem(ModArmorMaterials.OWL_MASK, ArmorItem.Type.HELMET, new Item.Properties().rarity(Rarity.RARE)));
+
+    // --------------------------------------------------------------------------------------------------------------------------------
+    // Spawn Eggs
+
+    public static final RegistryObject<Item> PUPFISH_SPAWN_EGG = ITEMS.register("pupfish_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.PUPFISH, 0x7e9690, 0xc5d1c5, new Item.Properties()));
 
     // --------------------------------------------------------------------------------------------------------------------------------
     // Easter Eggs

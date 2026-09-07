@@ -50,6 +50,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.OGRE_MASK.get());
                         pOutput.accept(ModItems.OWL_MASK.get());
 
+                        pOutput.accept(ModItems.PUPFISH_SPAWN_EGG.get());
+
                         pOutput.accept(ModItems.DISCO_GIRL_DISC.get());
                     })
                     .build());
