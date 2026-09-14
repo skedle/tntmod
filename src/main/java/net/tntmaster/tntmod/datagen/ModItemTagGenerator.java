@@ -8,6 +8,7 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.tntmaster.tntmod.item.ModItems;
+import net.tntmaster.tntmod.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -22,6 +23,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
         this.tag(ItemTags.MUSIC_DISCS)
                 .add(ModItems.DISCO_GIRL_DISC.get());
+
+        this.tag(ModTags.Items.TAPE_ITEM)
+                .add(ModItems.TEST_TAPE.get());
 
 
     }

@@ -6,5 +6,33 @@
         "stream": true
       }
     ]
+  },
+
+  "lemons":{
+    "sounds": [
+      {
+        "name": "tntmod:lemons",
+        "stream": true
+      }
+    ]
+  },
+
+  "jarona": {
+    "subtitles": "sounds.tntmod.jarona",
+    "sounds": [
+      "tntmod:jarona"
+    ]
+  },
+  "flowery_goodbye": {
+    "subtitles": "sounds.tntmod.flowery_goodbye",
+    "sounds": [
+      "tntmod:flowery_goodbye"
+    ]
+  },
+  "ja_orange": {
+    "subtitles": "sounds.tntmod.ja_orange",
+    "sounds": [
+      "tntmod:ja_orange"
+    ]
   }
 }

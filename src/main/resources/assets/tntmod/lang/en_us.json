@@ -14,9 +14,15 @@
   "item.tntmod.ticket": "Carnival Ticket",
   "item.tntmod.spirit_seeds": "Spirit Seeds",
 
+  "item.tntmod.pupfish_spawn_egg": "Pupfish Spawn Egg",
+  "item.tntmod.shelbfish_spawn_egg": "Shelbfish Spawn Egg",
+
+  "item.tntmod.test_tape": "Test Tape",
 
   "block.tntmod.sapphire_block": "Sapphire Block",
   "block.tntmod.tape_player": "Tape Player",
+  "block.tntmod.golden_flower": "Golden Flower",
+  "block.tntmod.potted_golden_flower": "Potted",
 
   "item.tntmod.tallow": "Kuraokami Tallow",
 
@@ -35,11 +41,10 @@
   "item.tntmod.disco_girl_disc": "Disco Girl",
   "item.tntmod.disco_girl_disc.desc": "Gravity Falls - Disco Girl",
 
-  "item.tntmod.pupfish_spawn_egg": "Pupfish Spawn Egg",
-  "item.tntmod.shelbfish_spawn_egg": "Shelbfish Spawn Egg",
-
-  "entity.tntmod.pupfish": "Pupfish",
+  "entity.tntmod.pupfish": "Godshome Pupfish",
   "entity.tntmod.shelbfish": "Shelbfish",
+
+  "sounds.tntmod.jarona": "Jarona",
 
   "tooltip.tntmod.ledg_bar.tooltip": "Makes you feel Invincible!",
 

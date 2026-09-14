@@ -1,6 +1,8 @@
 package net.tntmaster.tntmod.datagen;
 
+import net.minecraft.world.level.block.Block;
 import net.tntmaster.tntmod.Tntmod;
+import net.tntmaster.tntmod.block.ModBlocks;
 import net.tntmaster.tntmod.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -37,10 +39,15 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.TALLOW);
 
+        simpleItem(ModItems.PUPFISH_SPAWN_EGG);
+        simpleItem(ModItems.SHELBFISH_SPAWN_EGG);
+
         simpleItem(ModItems.OWL_MASK);
         simpleItem(ModItems.OGRE_MASK);
 
         simpleItem(ModItems.DISCO_GIRL_DISC);
+
+        simpleBlockItemTexture(ModBlocks.GOLDEN_FLOWER);
 
 
 
@@ -50,5 +57,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Tntmod.MODID, "item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItemTexture(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Tntmod.MODID, "block/" + item.getId().getPath()));
     }
 }

@@ -18,6 +18,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
+        this.dropSelf(ModBlocks.TAPE_PLAYER.get());
+        this.dropSelf(ModBlocks.GOLDEN_FLOWER.get());
+        this.add(ModBlocks.POTTED_GOLDEN_FLOWER.get(), createPotFlowerItemTable(ModBlocks.GOLDEN_FLOWER.get()));
 
     }
 

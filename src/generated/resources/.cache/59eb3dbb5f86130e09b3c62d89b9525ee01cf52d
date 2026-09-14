@@ -1,2 +1,5 @@
-// 1.20.1	2026-04-14T15:56:06.49758619	Loot Tables
+// 1.20.1	2026-09-13T09:28:21.626683006	Loot Tables
+2774d5bd5434a85dec330535db3b0b6082ec0d6a data/tntmod/loot_tables/blocks/golden_flower.json
+b7e61ab62cc9869e3cfa62ab46c63c5865325c68 data/tntmod/loot_tables/blocks/potted_golden_flower.json
 dfc06fd06c3f7bde6f42839cd7340537817aa59e data/tntmod/loot_tables/blocks/sapphire_block.json
+132e3c919a7473072ca48669777e09d46a922541 data/tntmod/loot_tables/blocks/tape_player.json

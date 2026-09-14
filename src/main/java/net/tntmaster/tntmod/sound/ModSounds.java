@@ -14,6 +14,14 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> DISCO_GIRL = registerSoundEvents("disco_girl");
 
+    public static final RegistryObject<SoundEvent> LEMONS = registerSoundEvents("lemons");
+
+    public static final RegistryObject<SoundEvent> JARONA = registerSoundEvents("jarona");
+
+    public static final RegistryObject<SoundEvent> FLOWERY_GOODBYE = registerSoundEvents("flowery_goodbye");
+
+    public static final RegistryObject<SoundEvent> JA_ORANGE = registerSoundEvents("ja_orange");
+
     private static RegistryObject<SoundEvent> registerSoundEvents(String name) {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(Tntmod.MODID, name)));
     }

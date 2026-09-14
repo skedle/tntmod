@@ -2,7 +2,9 @@ package net.tntmaster.tntmod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.tntmaster.tntmod.block.ModBlocks;
+import net.tntmaster.tntmod.block.custom.JaronaFlowerPotBlock;
 import net.tntmaster.tntmod.block.entity.ModBlockEntities;
 import net.tntmaster.tntmod.entity.ModEntities;
 import net.tntmaster.tntmod.entity.client.PupfIshRenderer;
@@ -33,6 +35,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.tntmaster.tntmod.sound.ModSounds;
+import net.tntmaster.tntmod.util.ModStats;
 import org.slf4j.Logger;
 import net.tntmaster.tntmod.item.ModItems;
 
@@ -102,6 +105,10 @@ public class Tntmod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.GOLDEN_FLOWER.getId(), ModBlocks.POTTED_GOLDEN_FLOWER);
+                });
+
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
 

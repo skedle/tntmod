@@ -1,5 +1,8 @@
 package net.tntmaster.tntmod.datagen;
 
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.fml.common.Mod;
 import net.tntmaster.tntmod.Tntmod;
 import net.tntmaster.tntmod.block.ModBlocks;
 import net.minecraft.data.PackOutput;
@@ -16,6 +19,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.SAPPHIRE_BLOCK);
+
+        simpleBlockWithItem(ModBlocks.TAPE_PLAYER.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/tape_player")));
 
     }
 

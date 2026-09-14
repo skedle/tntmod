@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "have_face=false": {
+      "model": "tntmod:block/golden_flower"
+    },
+    "have_face=true": {
+      "model": "tntmod:block/golden_flower_face"
+    }
+  }
+}

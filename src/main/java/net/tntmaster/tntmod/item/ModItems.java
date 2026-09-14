@@ -10,6 +10,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.tntmaster.tntmod.item.custom.TapeItem;
 import net.tntmaster.tntmod.sound.ModSounds;
 
 public class ModItems {
@@ -106,16 +107,19 @@ public class ModItems {
     // Spawn Eggs
 
     public static final RegistryObject<Item> PUPFISH_SPAWN_EGG = ITEMS.register("pupfish_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntities.PUPFISH, 0x7e9690, 0xc5d1c5, new Item.Properties()));
+            () -> new ForgeSpawnEggItem(ModEntities.PUPFISH, 0xffffff, 0xffffff, new Item.Properties()));
 
     public static final RegistryObject<Item> SHELBFISH_SPAWN_EGG = ITEMS.register("shelbfish_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntities.SHELBFISH, 0x7e9690, 0xc5d1c5, new Item.Properties()));
+            () -> new ForgeSpawnEggItem(ModEntities.SHELBFISH, 0xffffff, 0xffffff, new Item.Properties()));
 
     // --------------------------------------------------------------------------------------------------------------------------------
     // Easter Eggs
 
     public static final RegistryObject<Item> DISCO_GIRL_DISC = ITEMS.register("disco_girl_disc",
             () -> new RecordItem(6, ModSounds.DISCO_GIRL, new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 2900));
+
+    public static final RegistryObject<Item> TEST_TAPE = ITEMS.register("test_tape",
+            () -> new TapeItem(ModSounds.LEMONS, new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 560));
 
 
     public static void  register(IEventBus eventBus) {

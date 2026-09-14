@@ -35,6 +35,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SPIRIT_SEEDS.get());
 
                         pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
+                        pOutput.accept(ModBlocks.TAPE_PLAYER.get());
+                        pOutput.accept(ModBlocks.GOLDEN_FLOWER.get());
 
                         pOutput.accept(ModItems.PARASITE.get());
                         pOutput.accept(ModItems.LEDGBAR.get());
@@ -52,6 +54,8 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModItems.PUPFISH_SPAWN_EGG.get());
                         pOutput.accept(ModItems.SHELBFISH_SPAWN_EGG.get());
+
+                        pOutput.accept(ModItems.TEST_TAPE.get());
 
                         pOutput.accept(ModItems.DISCO_GIRL_DISC.get());
                     })
