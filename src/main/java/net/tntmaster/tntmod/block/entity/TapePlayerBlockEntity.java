@@ -5,6 +5,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Clearable;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.Entity;
@@ -24,6 +25,7 @@ import net.tntmaster.tntmod.networking.ModPackets;
 import net.tntmaster.tntmod.networking.packet.PlayTapeS2CPacket;
 import net.tntmaster.tntmod.networking.packet.RemoveTapeC2SPacket;
 import net.tntmaster.tntmod.networking.packet.StopTapeS2CPacket;
+import net.tntmaster.tntmod.sound.ModSounds;
 import net.tntmaster.tntmod.util.ModTags;
 
 import javax.annotation.Nullable;
@@ -31,7 +33,6 @@ import java.util.List;
 import java.util.Objects;
 
 public class TapePlayerBlockEntity extends BlockEntity implements Clearable, ContainerSingleItem {
-    private static final int SONG_END_PADDING = 20;
     private final NonNullList<ItemStack> items = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
     private int ticksSinceLastEvent;
     private long tickCount;
@@ -79,9 +80,8 @@ public class TapePlayerBlockEntity extends BlockEntity implements Clearable, Con
     @VisibleForTesting
     public void startPlaying() {
         List<ServerPlayer> players = this.getLevel().getServer().getPlayerList().getPlayers();
-
-        TapeItem tapeItem = (TapeItem) this.getFirstItem().getItem();
         ItemStack itemStack = this.getFirstItem();
+        this.level.playSound(null, this.getBlockPos().getCenter().x, this.getBlockPos().getCenter().y, this.getBlockPos().getCenter().z, ModSounds.TAPE_INSERT.get(), SoundSource.BLOCKS, 1, 1);
         this.tapeStartedTick = this.tickCount;
         this.isPlaying = true;
         for(ServerPlayer player : players) {
@@ -195,6 +195,7 @@ public class TapePlayerBlockEntity extends BlockEntity implements Clearable, Con
             BlockPos blockPos = this.getBlockPos();
             ItemStack itemStack = this.getFirstItem();
             if (!itemStack.isEmpty()) {
+                this.level.playSound(null, this.getBlockPos().getCenter().x, this.getBlockPos().getCenter().y, this.getBlockPos().getCenter().z, ModSounds.TAPE_EJECT.get(), SoundSource.BLOCKS, 1, 1);
                 ModPackets.sendToServer(new RemoveTapeC2SPacket(blockPos, itemStack));
                 this.removeFirstItem();
             }

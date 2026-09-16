@@ -34,5 +34,17 @@
     "sounds": [
       "tntmod:ja_orange"
     ]
+  },
+  "tape_eject": {
+    "subtitles": "sounds.tntmod.tape_eject",
+    "sounds": [
+      "tntmod:tape_eject"
+    ]
+  },
+  "tape_insert": {
+    "subtitles": "sounds.tntmod.tape_insert",
+    "sounds": [
+      "tntmod:tape_insert"
+    ]
   }
 }

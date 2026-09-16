@@ -22,6 +22,10 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> JA_ORANGE = registerSoundEvents("ja_orange");
 
+    public static final RegistryObject<SoundEvent> TAPE_EJECT = registerSoundEvents("tape_eject");
+
+    public static final RegistryObject<SoundEvent> TAPE_INSERT = registerSoundEvents("tape_insert");
+
     private static RegistryObject<SoundEvent> registerSoundEvents(String name) {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(Tntmod.MODID, name)));
     }
