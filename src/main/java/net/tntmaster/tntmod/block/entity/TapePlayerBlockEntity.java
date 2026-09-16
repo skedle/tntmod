@@ -22,6 +22,7 @@ import net.tntmaster.tntmod.block.custom.TapePlayerBlock;
 import net.tntmaster.tntmod.item.custom.TapeItem;
 import net.tntmaster.tntmod.networking.ModPackets;
 import net.tntmaster.tntmod.networking.packet.PlayTapeS2CPacket;
+import net.tntmaster.tntmod.networking.packet.RemoveTapeC2SPacket;
 import net.tntmaster.tntmod.networking.packet.StopTapeS2CPacket;
 import net.tntmaster.tntmod.util.ModTags;
 
@@ -173,7 +174,7 @@ public class TapePlayerBlockEntity extends BlockEntity implements Clearable, Con
         return pTarget.hasAnyMatching(ItemStack::isEmpty);
     }
 
-    public void removeTape() {
+    public void breakTapePlayer() {
         if (this.level != null && !this.level.isClientSide) {
             BlockPos blockPos = this.getBlockPos();
             ItemStack itemStack = this.getFirstItem();
@@ -187,6 +188,18 @@ public class TapePlayerBlockEntity extends BlockEntity implements Clearable, Con
 
             }
         }
+    }
+
+    public void removeTape() {
+        if (this.level != null && !this.level.isClientSide) {
+            BlockPos blockPos = this.getBlockPos();
+            ItemStack itemStack = this.getFirstItem();
+            if (!itemStack.isEmpty()) {
+                ModPackets.sendToServer(new RemoveTapeC2SPacket(blockPos, itemStack));
+                this.removeFirstItem();
+            }
+        }
+
     }
 
     public static void playTapeTick(Level pLevel, BlockPos pPos, BlockState pState, TapePlayerBlockEntity pTapePlayer) {

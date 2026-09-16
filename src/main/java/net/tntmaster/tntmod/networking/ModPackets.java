@@ -7,9 +7,7 @@ import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.simple.SimpleChannel;
 import net.tntmaster.tntmod.Tntmod;
-import net.tntmaster.tntmod.networking.packet.ExampleC2SPacket;
-import net.tntmaster.tntmod.networking.packet.PlayTapeS2CPacket;
-import net.tntmaster.tntmod.networking.packet.StopTapeS2CPacket;
+import net.tntmaster.tntmod.networking.packet.*;
 
 public class ModPackets {
     private static SimpleChannel INSTANCE;
@@ -45,6 +43,11 @@ public class ModPackets {
                 .decoder(StopTapeS2CPacket::new)
                 .encoder(StopTapeS2CPacket::toBytes)
                 .consumerMainThread(StopTapeS2CPacket::handle)
+                .add();
+        net.messageBuilder(RemoveTapeC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+                .decoder(RemoveTapeC2SPacket::new)
+                .encoder(RemoveTapeC2SPacket::toBytes)
+                .consumerMainThread(RemoveTapeC2SPacket::handle)
                 .add();
     }
     public static <MSG> void sendToServer(MSG message) {

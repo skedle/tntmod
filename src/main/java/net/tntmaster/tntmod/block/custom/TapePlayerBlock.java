@@ -79,7 +79,7 @@ public class TapePlayerBlock extends BaseEntityBlock {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
             if (blockEntity instanceof TapePlayerBlockEntity) {
                 TapePlayerBlockEntity tapePlayerBlockEntity = (TapePlayerBlockEntity) blockEntity;
-                tapePlayerBlockEntity.removeTape();
+                tapePlayerBlockEntity.breakTapePlayer();
             }
             super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
         }

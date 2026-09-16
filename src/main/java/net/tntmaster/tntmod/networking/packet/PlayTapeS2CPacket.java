@@ -37,11 +37,12 @@ public class PlayTapeS2CPacket {
     public boolean handle(Supplier<NetworkEvent.Context> supplier) {
         NetworkEvent.Context context = supplier.get();
         context.enqueueWork(() -> {
-            if (tapeItem.getItem() instanceof TapeItem) {
-                TapeSound tapeSound = TapeSound.getInstance();
-                tapeSound.playTape(pPos, (TapeItem) tapeItem.getItem());
-
+            if (!(tapeItem.getItem() instanceof TapeItem)) {
+                return;
             }
+
+            TapeSound tapeSound = TapeSound.getInstance();
+            tapeSound.playTape(pPos, (TapeItem) tapeItem.getItem());
 
         });
         return true;
