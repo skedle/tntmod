@@ -34,6 +34,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.tntmaster.tntmod.networking.ModPackets;
 import net.tntmaster.tntmod.sound.ModSounds;
 import net.tntmaster.tntmod.util.ModStats;
 import org.slf4j.Logger;
@@ -106,6 +107,7 @@ public class Tntmod
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         event.enqueueWork(() -> {
+            ModPackets.register();
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.GOLDEN_FLOWER.getId(), ModBlocks.POTTED_GOLDEN_FLOWER);
                 });
 

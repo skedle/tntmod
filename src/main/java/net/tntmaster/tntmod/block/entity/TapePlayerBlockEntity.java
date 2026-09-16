@@ -1,14 +1,10 @@
 package net.tntmaster.tntmod.block.entity;
 
 import com.google.common.annotations.VisibleForTesting;
-import com.google.common.collect.Maps;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.sounds.SimpleSoundInstance;
-import net.minecraft.client.resources.sounds.SoundInstance;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.Clearable;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.Entity;
@@ -24,10 +20,13 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.ticks.ContainerSingleItem;
 import net.tntmaster.tntmod.block.custom.TapePlayerBlock;
 import net.tntmaster.tntmod.item.custom.TapeItem;
+import net.tntmaster.tntmod.networking.ModPackets;
+import net.tntmaster.tntmod.networking.packet.PlayTapeS2CPacket;
+import net.tntmaster.tntmod.networking.packet.StopTapeS2CPacket;
 import net.tntmaster.tntmod.util.ModTags;
 
 import javax.annotation.Nullable;
-import java.util.Map;
+import java.util.List;
 import java.util.Objects;
 
 public class TapePlayerBlockEntity extends BlockEntity implements Clearable, ContainerSingleItem {
@@ -37,7 +36,6 @@ public class TapePlayerBlockEntity extends BlockEntity implements Clearable, Con
     private long tickCount;
     private long tapeStartedTick;
     private boolean isPlaying;
-    private final Map<BlockPos, SoundInstance> playingTapes = Maps.newHashMap();
 
     public TapePlayerBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.TAPE_PLAYER_BE.get(), pPos, pBlockState);
@@ -79,18 +77,27 @@ public class TapePlayerBlockEntity extends BlockEntity implements Clearable, Con
 
     @VisibleForTesting
     public void startPlaying() {
+        List<ServerPlayer> players = this.getLevel().getServer().getPlayerList().getPlayers();
+
         TapeItem tapeItem = (TapeItem) this.getFirstItem().getItem();
+        ItemStack itemStack = this.getFirstItem();
         this.tapeStartedTick = this.tickCount;
         this.isPlaying = true;
-        this.level.updateNeighborsAt(this.getBlockPos(), this.getBlockState().getBlock());
-        this.playTape(tapeItem.getSound(), this.getBlockPos(), tapeItem);
+        for(ServerPlayer player : players) {
+            if (Math.abs(player.getX() - this.getBlockPos().getX()) <= 64 && Math.abs(player.getY() - this.getBlockPos().getY()) <= 64 && Math.abs(player.getZ() - getBlockPos().getZ()) <= 64)
+                ModPackets.sendToPlayer(new PlayTapeS2CPacket(this.getBlockPos(), itemStack), player);
+        }
         this.setChanged();
     }
 
     private void stopPlaying() {
+        List<ServerPlayer> players = this.getLevel().getServer().getPlayerList().getPlayers();
+
         this.isPlaying = false;
-        this.level.updateNeighborsAt(this.getBlockPos(), this.getBlockState().getBlock());
-        this.stopTape(this.getBlockPos());
+        for(ServerPlayer player : players) {
+            ModPackets.sendToPlayer(new StopTapeS2CPacket(this.getBlockPos()), player);
+        }
+
         this.setChanged();
     }
 
@@ -184,28 +191,6 @@ public class TapePlayerBlockEntity extends BlockEntity implements Clearable, Con
 
     public static void playTapeTick(Level pLevel, BlockPos pPos, BlockState pState, TapePlayerBlockEntity pTapePlayer) {
         pTapePlayer.tick(pLevel, pPos, pState);
-    }
-
-    public void playTape(@Nullable SoundEvent pSoundEvent, BlockPos pPos, @Nullable TapeItem tapeItem) {
-        Minecraft minecraft = Minecraft.getInstance();
-        SoundInstance soundInstance = this.playingTapes.get(pPos);
-        if (soundInstance != null) {
-            minecraft.getSoundManager().stop(soundInstance);
-            this.playingTapes.remove(pPos);
-
-        }
-        SoundInstance simpleSoundInstance = SimpleSoundInstance.forRecord(pSoundEvent, Vec3.atCenterOf(pPos));
-        this.playingTapes.put(pPos, simpleSoundInstance);
-        minecraft.getSoundManager().play(simpleSoundInstance);
-    }
-
-    public void stopTape(BlockPos pPos) {
-        Minecraft minecraft = Minecraft.getInstance();
-        SoundInstance soundInstance = this.playingTapes.get(pPos);
-        if (soundInstance != null) {
-            minecraft.getSoundManager().stop(soundInstance);
-            this.playingTapes.remove(pPos);
-        }
     }
 
 }
