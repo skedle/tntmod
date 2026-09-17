@@ -17,7 +17,15 @@
   "item.tntmod.pupfish_spawn_egg": "Pupfish Spawn Egg",
   "item.tntmod.shelbfish_spawn_egg": "Shelbfish Spawn Egg",
 
-  "item.tntmod.test_tape": "Test Tape",
+  "item.tntmod.tape_disco_girl": "Tape",
+  "item.tntmod.tape_disco_girl.desc": "Gravity Falls - Disco Girl",
+  "item.tntmod.tape_brain_damage":"Tape",
+  "item.tntmod.tape_brain_damage.desc": "Pink Floyd - Brain Damage",
+  "item.tntmod.tape_spear_of_justice":"Tape",
+  "item.tntmod.tape_spear_of_justice.desc": "Toby Fox - Spear of Justice",
+  "item.tntmod.test_tape": "Tape",
+  "item.tntmod.test_tape.desc": "???",
+  "item.tntmod.tape.no.use": "???",
 
   "block.tntmod.sapphire_block": "Sapphire Block",
   "block.tntmod.tape_player": "Tape Player",
@@ -38,13 +46,12 @@
   "item.tntmod.ogre_mask": "Ogre Mask",
   "item.tntmod.owl_mask": "Owl Mask",
 
-  "item.tntmod.disco_girl_disc": "Disco Girl",
-  "item.tntmod.disco_girl_disc.desc": "Gravity Falls - Disco Girl",
-
   "entity.tntmod.pupfish": "Godshome Pupfish",
   "entity.tntmod.shelbfish": "Shelbfish",
 
   "sounds.tntmod.jarona": "Jarona",
+
+  "stat.tntmod.jarona": "Jarona",
 
   "tooltip.tntmod.ledg_bar.tooltip": "Makes you feel Invincible!",
 

@@ -16,6 +16,10 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> LEMONS = registerSoundEvents("lemons");
 
+    public static final RegistryObject<SoundEvent> BRAIN_DAMAGE = registerSoundEvents("brain_damage");
+
+    public static final RegistryObject<SoundEvent> SPEAR_OF_JUSTICE = registerSoundEvents("spear_of_justice");
+
     public static final RegistryObject<SoundEvent> JARONA = registerSoundEvents("jarona");
 
     public static final RegistryObject<SoundEvent> FLOWERY_GOODBYE = registerSoundEvents("flowery_goodbye");

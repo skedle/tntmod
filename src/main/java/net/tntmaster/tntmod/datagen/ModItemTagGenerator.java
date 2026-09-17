@@ -1,6 +1,5 @@
 package net.tntmaster.tntmod.datagen;
 
-import net.minecraft.tags.ItemTags;
 import net.tntmaster.tntmod.Tntmod;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -21,11 +20,12 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
 
-        this.tag(ItemTags.MUSIC_DISCS)
-                .add(ModItems.DISCO_GIRL_DISC.get());
 
         this.tag(ModTags.Items.TAPE_ITEM)
-                .add(ModItems.TEST_TAPE.get());
+                .add(ModItems.TEST_TAPE.get())
+                .add(ModItems.TAPE_BRAIN_DAMAGE.get())
+                .add(ModItems.TAPE_DISCO_GIRL.get())
+                .add(ModItems.TAPE_SPEAR_OF_JUSTICE.get());
 
 
     }

@@ -56,8 +56,10 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SHELBFISH_SPAWN_EGG.get());
 
                         pOutput.accept(ModItems.TEST_TAPE.get());
+                        pOutput.accept(ModItems.TAPE_DISCO_GIRL.get());
+                        pOutput.accept(ModItems.TAPE_BRAIN_DAMAGE.get());
+                        pOutput.accept(ModItems.TAPE_SPEAR_OF_JUSTICE.get());
 
-                        pOutput.accept(ModItems.DISCO_GIRL_DISC.get());
                     })
                     .build());
 

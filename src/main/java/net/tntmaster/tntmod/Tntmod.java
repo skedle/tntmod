@@ -4,7 +4,6 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.tntmaster.tntmod.block.ModBlocks;
-import net.tntmaster.tntmod.block.custom.JaronaFlowerPotBlock;
 import net.tntmaster.tntmod.block.entity.ModBlockEntities;
 import net.tntmaster.tntmod.entity.ModEntities;
 import net.tntmaster.tntmod.entity.client.PupfIshRenderer;
@@ -83,6 +82,7 @@ public class Tntmod
         ModSounds.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModStats.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

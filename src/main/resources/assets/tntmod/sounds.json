@@ -16,7 +16,22 @@
       }
     ]
   },
-
+  "brain_damage":{
+    "sounds": [
+      {
+        "name": "tntmod:brain_damage",
+        "stream": true
+      }
+    ]
+  },
+  "spear_of_justice":{
+    "sounds": [
+      {
+        "name": "tntmod:spear_of_justice",
+        "stream": true
+      }
+    ]
+  },
   "jarona": {
     "subtitles": "sounds.tntmod.jarona",
     "sounds": [

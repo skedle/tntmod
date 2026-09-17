@@ -1,12 +1,14 @@
 package net.tntmaster.tntmod.item.custom;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -14,8 +16,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.tntmaster.tntmod.block.ModBlocks;
 import net.tntmaster.tntmod.block.custom.TapePlayerBlock;
 import net.tntmaster.tntmod.block.entity.TapePlayerBlockEntity;
+import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.Nullable;
+import java.util.List;
 
 public class TapeItem extends Item {
     private final int lengthInTicks;
@@ -36,22 +39,27 @@ public class TapeItem extends Item {
         if (blockstate.is(ModBlocks.TAPE_PLAYER.get()) && !blockstate.getValue(TapePlayerBlock.HAS_TAPE)) {
             ItemStack itemStack = pContext.getItemInHand();
             if (!level.isClientSide) {
-                Player player = pContext.getPlayer();
                 BlockEntity blockEntity = level.getBlockEntity(blockpos);
                 if (blockEntity instanceof TapePlayerBlockEntity) {
                     TapePlayerBlockEntity tapePlayerBlockEntity = (TapePlayerBlockEntity) blockEntity;
                     tapePlayerBlockEntity.setFirstItem(itemStack.copy());
                 }
                 itemStack.shrink(1);
-
             }
             return InteractionResult.sidedSuccess(level.isClientSide);
-
         } else {
             return InteractionResult.PASS;
         }
     }
 
+    @Override
+    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+        pTooltipComponents.add(this.getDisplayName().withStyle(ChatFormatting.GRAY));
+    }
+
+    public MutableComponent getDisplayName() {
+        return Component.translatable(this.getDescriptionId() + ".desc");
+    }
 
     public SoundEvent getSound() {
         return this.soundSupplier.get();

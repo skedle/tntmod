@@ -2,6 +2,7 @@ package net.tntmaster.tntmod.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -13,6 +14,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.tntmaster.tntmod.sound.ModSounds;
+import net.tntmaster.tntmod.util.ModStats;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
@@ -37,16 +39,16 @@ public class JaronaFlowerPotBlock extends FlowerPotBlock {
         if (!pState.getValue(HAVE_FACE))
             pLevel.setBlockAndUpdate(pPos, pState.setValue(HAVE_FACE, true));
         Random r = new Random();
-        Integer r1 = r.nextInt(100);
+        int r1 = r.nextInt(100);
         if (r1 == 99) {
-            pLevel.playSound(null, pPos.getCenter().x, pPos.getCenter().y, pPos.getCenter().z, ModSounds.JA_ORANGE.get(), SoundSource.MASTER, 1, 1);
+            pLevel.playSound(null, pPos.getCenter().x, pPos.getCenter().y, pPos.getCenter().z, ModSounds.JA_ORANGE.get(), SoundSource.MASTER, 1f, 1f);
         }
         else {
-            pLevel.playSound(null, pPos.getCenter().x, pPos.getCenter().y, pPos.getCenter().z, ModSounds.JARONA.get(), SoundSource.MASTER, 0.5f, 1);
+            pLevel.playSound(null, pPos.getCenter().x, pPos.getCenter().y, pPos.getCenter().z, ModSounds.JARONA.get(), SoundSource.MASTER, 1f, 1f);
 
         }
-        r1 = null;
-        return InteractionResult.PASS;
+        pPlayer.awardStat(Stats.CUSTOM.get(ModStats.JARONA.get()));
+        return InteractionResult.sidedSuccess(pLevel.isClientSide);
     }
 
     @Override

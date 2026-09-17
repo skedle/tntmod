@@ -2,6 +2,7 @@ package net.tntmaster.tntmod.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffect;
@@ -13,7 +14,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.tntmaster.tntmod.sound.ModSounds;
+import net.tntmaster.tntmod.util.ModStats;
 
 import java.util.Random;
 import java.util.function.Supplier;
@@ -33,24 +36,24 @@ public class JaronaFlowerBlock extends FlowerBlock {
 
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-        if (!pState.getValue(HAVE_FACE))
+        if (!(pState.getValue(HAVE_FACE)))
             pLevel.setBlockAndUpdate(pPos, pState.setValue(HAVE_FACE, true));
         Random r = new Random();
-        Integer r1 = r.nextInt(100);
-        if (r1 != 99) {
-            pLevel.playSound(null, pPos.getCenter().x, pPos.getCenter().y, pPos.getCenter().z, ModSounds.JARONA.get(), SoundSource.MASTER, 0.5f, 1);
+        int r1 = r.nextInt(100);
+        if (r1 == 99) {
+            pLevel.playSound(null, pPos.getCenter().x, pPos.getCenter().y, pPos.getCenter().z, ModSounds.JA_ORANGE.get(), SoundSource.BLOCKS, 1f, 1f);
         }
         else {
-            pLevel.playSound(null, pPos.getCenter().x, pPos.getCenter().y, pPos.getCenter().z, ModSounds.JA_ORANGE.get(), SoundSource.MASTER, 1, 1);
+            pLevel.playSound(null, pPos.getCenter().x, pPos.getCenter().y, pPos.getCenter().z, ModSounds.JARONA.get(), SoundSource.BLOCKS, 1f, 1f);
         }
-        r1 = null;
-        return InteractionResult.PASS;
+        pPlayer.awardStat(Stats.CUSTOM.get(ModStats.JARONA.get()));
+        return InteractionResult.sidedSuccess(pLevel.isClientSide);
     }
 
     @Override
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pMovedByPiston) {
         if (pState.getValue(HAVE_FACE))
-            pLevel.playSound(null, pPos.getCenter().x, pPos.getCenter().y, pPos.getCenter().z, ModSounds.FLOWERY_GOODBYE.get(), SoundSource.MASTER, 1, 1);
+            pLevel.playSound(null, pPos.getCenter().x, pPos.getCenter().y, pPos.getCenter().z, ModSounds.FLOWERY_GOODBYE.get(), SoundSource.BLOCKS, 1, 1);
 
     }
 }

@@ -1,5 +1,8 @@
 {
   "values": [
-    "tntmod:test_tape"
+    "tntmod:test_tape",
+    "tntmod:tape_brain_damage",
+    "tntmod:tape_disco_girl",
+    "tntmod:tape_spear_of_justice"
   ]
 }

@@ -80,19 +80,19 @@ public class ModItems {
     // Tools 'n' Weapons
 
     public static final RegistryObject<Item> HOOK_SWORD = ITEMS.register("hook_sword",
-            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties().rarity(Rarity.EPIC)));
+            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,-2, new Item.Properties().rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> SILVERED_SWORD = ITEMS.register("silvered_sword",
-            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties().rarity(Rarity.EPIC)));
+            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,-2, new Item.Properties().rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> AMETHYST_SWORD = ITEMS.register("amethyst_sword",
-            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties().rarity(Rarity.EPIC)));
+            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,-2, new Item.Properties().rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> PARASITE_SWORD = ITEMS.register("parasite_sword",
-            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties().rarity(Rarity.EPIC)));
+            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,-2, new Item.Properties().rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> CLAW_SCYTHE = ITEMS.register("claw_scythe",
-            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,0, new Item.Properties().rarity(Rarity.EPIC)));
+            () -> new SwordItem(ModToolTiers.WORLD_ESSENCE, 0,-2, new Item.Properties().rarity(Rarity.EPIC)));
 
     // --------------------------------------------------------------------------------------------------------------------------------
     // Armor
@@ -113,13 +113,19 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.SHELBFISH, 0xffffff, 0xffffff, new Item.Properties()));
 
     // --------------------------------------------------------------------------------------------------------------------------------
-    // Easter Eggs
+    // Tapes
 
-    public static final RegistryObject<Item> DISCO_GIRL_DISC = ITEMS.register("disco_girl_disc",
-            () -> new RecordItem(6, ModSounds.DISCO_GIRL, new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 2900));
+    public static final RegistryObject<Item> TAPE_DISCO_GIRL = ITEMS.register("tape_disco_girl",
+            () -> new TapeItem(ModSounds.DISCO_GIRL, new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 2900));
 
     public static final RegistryObject<Item> TEST_TAPE = ITEMS.register("test_tape",
             () -> new TapeItem(ModSounds.LEMONS, new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 560));
+
+    public static final RegistryObject<Item> TAPE_BRAIN_DAMAGE = ITEMS.register("tape_brain_damage",
+            () -> new TapeItem(ModSounds.BRAIN_DAMAGE, new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 4660));
+
+    public static final RegistryObject<Item> TAPE_SPEAR_OF_JUSTICE = ITEMS.register("tape_spear_of_justice",
+            () -> new TapeItem(ModSounds.SPEAR_OF_JUSTICE, new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 2340));
 
 
     public static void  register(IEventBus eventBus) {
