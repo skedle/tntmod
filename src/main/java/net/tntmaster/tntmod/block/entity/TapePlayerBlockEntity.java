@@ -8,8 +8,10 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Clearable;
 import net.minecraft.world.Container;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -23,7 +25,6 @@ import net.tntmaster.tntmod.block.custom.TapePlayerBlock;
 import net.tntmaster.tntmod.item.custom.TapeItem;
 import net.tntmaster.tntmod.networking.ModPackets;
 import net.tntmaster.tntmod.networking.packet.PlayTapeS2CPacket;
-import net.tntmaster.tntmod.networking.packet.RemoveTapeC2SPacket;
 import net.tntmaster.tntmod.networking.packet.StopTapeS2CPacket;
 import net.tntmaster.tntmod.sound.ModSounds;
 import net.tntmaster.tntmod.util.ModTags;
@@ -190,17 +191,28 @@ public class TapePlayerBlockEntity extends BlockEntity implements Clearable, Con
         }
     }
 
-    public void removeTape() {
-        if (this.level != null && !this.level.isClientSide) {
-            BlockPos blockPos = this.getBlockPos();
+    public void removeTape(Player pPlayer) {
+        if (this.level != null && !this.level.isClientSide && pPlayer != null) {
             ItemStack itemStack = this.getFirstItem();
-            if (!itemStack.isEmpty()) {
-                this.level.playSound(null, this.getBlockPos().getCenter().x, this.getBlockPos().getCenter().y, this.getBlockPos().getCenter().z, ModSounds.TAPE_EJECT.get(), SoundSource.BLOCKS, 1, 1);
-                ModPackets.sendToServer(new RemoveTapeC2SPacket(blockPos, itemStack));
+
+            if (!(itemStack.isEmpty()) && itemStack.getItem() instanceof TapeItem) {
+                ItemStack tape = itemStack.copy();
+                Inventory pInventory = pPlayer.getInventory();
+
                 this.removeFirstItem();
+                this.stopPlaying();
+
+                if (pPlayer.getMainHandItem().isEmpty()) {
+                    pPlayer.setItemInHand(InteractionHand.MAIN_HAND, tape);
+                } else {
+                    pInventory.placeItemBackInInventory(tape);
+                }
+
+                this.level.playSound(null, this.getBlockPos(), ModSounds.TAPE_EJECT.get(), SoundSource.BLOCKS);
+                pPlayer.inventoryMenu.broadcastChanges();
+                this.setChanged();
             }
         }
-
     }
 
     public static void playTapeTick(Level pLevel, BlockPos pPos, BlockState pState, TapePlayerBlockEntity pTapePlayer) {

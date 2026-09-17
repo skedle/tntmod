@@ -44,11 +44,6 @@ public class ModPackets {
                 .encoder(StopTapeS2CPacket::toBytes)
                 .consumerMainThread(StopTapeS2CPacket::handle)
                 .add();
-        net.messageBuilder(RemoveTapeC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
-                .decoder(RemoveTapeC2SPacket::new)
-                .encoder(RemoveTapeC2SPacket::toBytes)
-                .consumerMainThread(RemoveTapeC2SPacket::handle)
-                .add();
     }
     public static <MSG> void sendToServer(MSG message) {
         INSTANCE.sendToServer(message);

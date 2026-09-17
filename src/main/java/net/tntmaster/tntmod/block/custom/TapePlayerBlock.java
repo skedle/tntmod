@@ -2,6 +2,7 @@ package net.tntmaster.tntmod.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
@@ -64,7 +65,7 @@ public class TapePlayerBlock extends BaseEntityBlock {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
             if (blockEntity instanceof TapePlayerBlockEntity) {
                 TapePlayerBlockEntity tapePlayerBlockEntity = (TapePlayerBlockEntity) blockEntity;
-                tapePlayerBlockEntity.removeTape();
+                tapePlayerBlockEntity.removeTape(pPlayer);
                 return InteractionResult.sidedSuccess(pLevel.isClientSide);
             }
         }
